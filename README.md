@@ -4,9 +4,30 @@
 |-------|-----------|
 | Nuxt.JS (vue), Firebase | [/nuxtjs-firebase](/nuxtjs-firebase/) |
 | MongoDB, Express, | |
-| | |
 
---------
+<BR>
+
+------
+
+
+## General Project Guide (Node.JS)
+
+1. Initialize the project
+    ```
+    npm init
+    ```
+
+2. Install dependencies (e.g. Express, Firebase)
+    ```
+    npm i express firebase
+    ```
+3. Install linters (e.g. eslint)
+    ```
+
+    ```
+
+------
+
 
 ## Git Flow (Feature Branch)
 
@@ -48,4 +69,6 @@ This is a short version of the [Git Feature Branch Workflow](https://www.atlassi
     git pull origin <new-feature>
     git push
     ```
+
+
 
