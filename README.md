@@ -2,8 +2,8 @@
 
 | Stack | Directory |
 |-------|-----------|
-| Nuxt.JS (vue), Firebase | [/nuxtjs-firebase](/nuxtjs-firebase/) |
-| MongoDB, Express, | |
+| Nuxt.JS (Vue), Firebase | [/nuxtjs-firebase](/nuxtjs-firebase/) |
+| MongoDB, Express, Vue.JS, Node.JS| [/mevn](/mevn) |
 
 <BR>
 
@@ -23,7 +23,7 @@
     ```
 3. Install linters (e.g. eslint)
     ```
-
+    npm init @eslint/config
     ```
 
 ------
