@@ -94,3 +94,13 @@ Expose to external traffice:
 ```
 kubectl expose deployment hello-server --type=LoadBalancer --port 8080
 ```
+
+Create a firewall rule to allow external traffic to the VM instances:
+```
+gcloud compute firewall-rules create www-firewall-network-lb \
+    --target-tags network-lb-tag --allow tcp:80
+```
+
+
+
+
