@@ -102,5 +102,10 @@ gcloud compute firewall-rules create www-firewall-network-lb \
 ```
 
 
-
+Create static external ip for the load balancer:
+```
+   gcloud compute addresses create network-lb-ip-1 \
+    --region us-central1 
+    
+```
 
