@@ -109,3 +109,59 @@ Create static external ip for the load balancer:
     
 ```
 
+Add legacy http health check resource:
+```
+gcloud compute http-health-checks create basic-check
+
+```
+
+Add a target pool in the same region as your instances. Run the following to create the target pool and use the health check, which is required for the service to function:
+```
+  gcloud compute target-pools create www-pool \
+    --region us-east4 --http-health-check basic-check
+```
+
+
+Add instances to the pool:
+```
+gcloud compute target-pools add-instances www-pool \
+    --instances www1,www2,www3
+```
+
+Add forwarding rule:
+```
+gcloud compute forwarding-rules create www-rule \
+    --region  us-east4 \
+    --ports 80 \
+    --address network-lb-ip-1 \
+    --target-pool www-pool
+```
+
+Enter the following command to view the external IP address of the www-rule forwarding rule used by the load balancer:
+```
+gcloud compute forwarding-rules describe www-rule --region us-east4
+```
+
+
+Create a loadbalancer template:
+```
+gcloud compute instance-templates create lb-backend-template \
+   --region=us-east4 \
+   --network=default \
+   --subnet=default \
+   --tags=allow-health-check \
+   --machine-type=e2-medium \
+   --image-family=debian-11 \
+   --image-project=debian-cloud \
+   --metadata=startup-script='#!/bin/bash
+     apt-get update
+     apt-get install apache2 -y
+     a2ensite default-ssl
+     a2enmod ssl
+     vm_hostname="$(curl -H "Metadata-Flavor:Google" \
+     http://169.254.169.254/computeMetadata/v1/instance/name)"
+     echo "Page served from: $vm_hostname" | \
+     tee /var/www/html/index.html
+     systemctl restart apache2'
+```
+
