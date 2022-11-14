@@ -54,6 +54,7 @@ gcloud run deploy email-service \
   --region us-east1 \
   --no-allow-unauthenticated \
   --max-instances=1
+  --service-account billing-service-sa-408@$GOOGLE_CLOUD_PROJECT.iam.gserviceaccount.com
 ```
 
 Get URL of a service
