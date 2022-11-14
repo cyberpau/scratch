@@ -55,3 +55,11 @@ gcloud run deploy email-service \
   --no-allow-unauthenticated \
   --max-instances=1
 ```
+
+Get URL of a service
+```
+BILLING_URL=$(gcloud run services describe private-billing-service-622 \
+--platform managed \
+--region us-central1 \
+--format "value(status.url)")
+```
