@@ -165,3 +165,12 @@ gcloud compute instance-templates create lb-backend-template \
      systemctl restart apache2'
 ```
 
+Add additional users to project:
+```
+  gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member=user:[EMAIL] --role=roles/logging.viewer
+  
+  gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member=user:[EMAIL] --role roles/source.writer
+  
+```
