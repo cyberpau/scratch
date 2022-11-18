@@ -51,6 +51,11 @@ Create pubsub subscription
 gcloud pubsub subscriptions create email-service-sub --topic new-lab-report --push-endpoint=$EMAIL_SERVICE_URL --push-auth-service-account=pubsub-cloud-run-invoker@$GOOGLE_CLOUD_PROJECT.iam.gserviceaccount.com
 ```
 
+Create Dockerfile and build:
+```
+docker build -t <service-name>:<version> .
+```
+
 Build via Cloud Build and deploy container via Cloud Run (deploy.sh)
 ```
 gcloud builds submit \
