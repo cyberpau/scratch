@@ -1,0 +1,4 @@
+## Create namespace:
+kubectl create ns development 
+kubectl create ns production 
+
