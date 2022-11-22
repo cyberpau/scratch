@@ -75,6 +75,7 @@ This is a short version of the [Git Feature Branch Workflow](https://www.atlassi
      `git branch -d <branch>`
 
 
+
 ## Rebase Strategy
 
 1. From the main branch, create your own local branch. You will only do this ONE TIME. This will be the only branch you will be commiting on.
