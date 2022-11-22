@@ -75,4 +75,14 @@ This is a short version of the [Git Feature Branch Workflow](https://www.atlassi
      `git branch -d <branch>`
 
 
+## Rebase
 
+```
+git checkout dev
+git pull
+git checkout paulo
+git rebase dev
+git checkout dev
+git rebase paulo
+git push
+```
