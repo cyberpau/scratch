@@ -77,12 +77,43 @@ This is a short version of the [Git Feature Branch Workflow](https://www.atlassi
 
 ## Rebase
 
+1. From the main branch, create your own local branch. You will only do this ONE TIME. This will be the only branch you will be commiting on.
+
 ```
-git checkout dev
+git pull
+git checkout -b paulo
+```
+
+2. Evertime you need to make code changes, first ensure that the main branch is latest.
+
+```
+git checkout main
+git pull
+```
+
+3. Go to dev branch and  do some code changes. Commit and push to remote branch. 
+```
+git push -u origin paulo
+```
+
+4. To ensure that your dev branch `paulo` is still up to date, go to main branch and pull the latest changes. Then go back to dev branch
+```
+git checkout main
 git pull
 git checkout paulo
-git rebase dev
-git checkout dev
+git rebase main
+```
+
+5. Go back to main branch, rebase from your dev branch and then push the changes
+```
+git checkout main
 git rebase paulo
 git push
+```
+
+6. Optional, to ensure that your local dev branch `paulo` is the same as remote branch `origin/paulo`:
+```
+git checkout paulo
+git pull
+git push -u origin paulo
 ```
