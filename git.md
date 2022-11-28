@@ -15,7 +15,7 @@ Source: [Git replacing LF with CRLF](https://stackoverflow.com/questions/1967370
 If you have used git before, probably you are using your personal account in the git config. To update this, run the following inside your work repository:
 
 ```
-git config user.name "FIRST_NAME LAST_NAME"
+git config user.name "John Paulo Mataac"
 
 git config user.email "MY_NAME@example.com"
 ```
