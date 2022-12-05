@@ -66,13 +66,15 @@ This is a short version of the [Git Feature Branch Workflow](https://www.atlassi
 
 6. Once work is completed on a feature, it is often recommended to delete the branch.
 
-    Delete a remote branch:
-     `git push -d origin <branch>`
-    Example
-     `git push -d origin dev-backend-users `
-
+    Delete a remote branch. Example: `git push -d origin dev-backend-users `
+     ```
+     git push -d origin <branch>
+     ```
+     
     Delete a local branch:
-     `git branch -d <branch>`
+     ```
+     git branch -d <branch>
+     ```
 
 
 
