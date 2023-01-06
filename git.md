@@ -120,3 +120,8 @@ git checkout paulo
 git pull
 git push -u origin paulo
 ```
+
+7. Optional, if origin is behind the head branch, use:
+```
+git push --force origin dev
+```
