@@ -179,3 +179,9 @@ Add additional users to project:
   --member=user:[EMAIL] --role roles/source.writer
   
 ```
+
+Setting cloud shell environment variables, to apply, use `source ./infraclass/config`
+```
+echo INFRACLASS_PROJECT_ID=<INSERT_PROJECT_ID> >> ~/infraclass/config
+echo INFRACLASS_REGION=<INSERT_REGION> >> ~/infraclass/config
+```
