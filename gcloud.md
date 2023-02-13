@@ -180,7 +180,7 @@ Add additional users to project:
   
 ```
 
-Setting cloud shell environment variables, to apply, use `source ./infraclass/config`
+Setting cloud shell environment variables, to apply, use `source ./infraclass/config`. To create persistence, save it to `.profile` by `vi .profile`
 ```
 echo INFRACLASS_PROJECT_ID=<INSERT_PROJECT_ID> >> ~/infraclass/config
 echo INFRACLASS_REGION=<INSERT_REGION> >> ~/infraclass/config
