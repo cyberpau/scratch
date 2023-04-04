@@ -1,13 +1,31 @@
 # GCloud
 
-## Config
-Set Config: [https://cloud.google.com/sdk/gcloud/reference/config/set](https://cloud.google.com/sdk/gcloud/reference/config/set)
-
 ## Setup
-List
+List of accounts
 ```
 gcloud auth list
 ```
+
+List of projects
+```
+gcloud config list project
+```
+
+## Config
+Set Config: [https://cloud.google.com/sdk/gcloud/reference/config/set](https://cloud.google.com/sdk/gcloud/reference/config/set)
+
+Examples:
+```
+gcloud config set compute/region us-west1
+
+```
+
+## Google Cloud Storage
+Make bucket (`mb`)
+```
+gsutil mb <YOUR-BUCKET-NAME> // gsutil mb gs://qwiklabs-gcp-00-846807476a94
+```
+
 
 ## PubSub
 
