@@ -26,6 +26,20 @@ Make bucket (`mb`)
 gsutil mb <YOUR-BUCKET-NAME> // gsutil mb gs://qwiklabs-gcp-00-846807476a94
 ```
 
+Copy files to bucket
+```
+gsutil cp ada.jpg gs://YOUR-BUCKET-NAME
+```
+
+Copy files from bucket
+```
+gsutil cp -r gs://YOUR-BUCKET-NAME/ada.jpg .
+```
+
+List files
+```
+gsutil ls gs://YOUR-BUCKET-NAME
+```
 
 ## PubSub
 
