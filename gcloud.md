@@ -3,6 +3,12 @@
 ## Config
 Set Config: [https://cloud.google.com/sdk/gcloud/reference/config/set](https://cloud.google.com/sdk/gcloud/reference/config/set)
 
+## Setup
+List
+```
+gcloud auth list
+```
+
 ## PubSub
 
 Create a new pubsub topic
