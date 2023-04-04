@@ -41,9 +41,14 @@ List files
 gsutil ls gs://YOUR-BUCKET-NAME
 ```
 
-Change permission
+Change Access Control List
 ```
 gsutil acl ch -u AllUsers:R gs://YOUR-BUCKET-NAME/ada.jpg
+```
+
+Delete
+```
+gsutil rm gs://YOUR-BUCKET-NAME/ada.jpg
 ```
 
 ## PubSub
