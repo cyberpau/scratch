@@ -41,6 +41,11 @@ List files
 gsutil ls gs://YOUR-BUCKET-NAME
 ```
 
+Change permission
+```
+gsutil acl ch -u AllUsers:R gs://YOUR-BUCKET-NAME/ada.jpg
+```
+
 ## PubSub
 
 Create a new pubsub topic
