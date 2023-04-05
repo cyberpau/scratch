@@ -98,6 +98,11 @@ async function publishPubSubMessage(labReport) {
 
 ```
 
+Get / Pull message after publish:
+```
+gcloud pubsub subscriptions pull --auto-ack MySub
+```
+
 ## Service Account
 
 Create pubsub service account
