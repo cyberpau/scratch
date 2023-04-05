@@ -160,6 +160,30 @@ BILLING_URL=$(gcloud run services describe private-billing-service-622 \
 --format "value(status.url)")
 ```
 
+## Compute
+Create a VM instance 
+```
+  gcloud compute instances create www1 \
+    --zone=us-east1-b \
+    --tags=network-lb-tag \
+    --machine-type=e2-small \
+    --image-family=debian-11 \
+    --image-project=debian-cloud \
+    --metadata=startup-script='#!/bin/bash
+      apt-get update
+      apt-get install apache2 -y
+      service apache2 restart
+      echo "
+<h3>Web Server: www1</h3>" | tee /var/www/html/index.html'
+```
+
+Create a firewall rule to allow external traffic to the VM instances:
+```
+gcloud compute firewall-rules create www-firewall-network-lb \
+    --target-tags network-lb-tag --allow tcp:80
+```
+
+
 ## Google Kubernetes Engine
 
 Create GKE Cluster:
@@ -181,12 +205,6 @@ kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1
 Expose to external traffice:
 ```
 kubectl expose deployment hello-server --type=LoadBalancer --port 8080
-```
-
-Create a firewall rule to allow external traffic to the VM instances:
-```
-gcloud compute firewall-rules create www-firewall-network-lb \
-    --target-tags network-lb-tag --allow tcp:80
 ```
 
 
