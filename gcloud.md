@@ -60,6 +60,17 @@ gcloud functions deploy helloWorld \
   --runtime nodejs8
 ```
 
+Check the status
+```
+gcloud functions describe helloWorld
+```
+
+View logs
+```
+gcloud functions logs read helloWorld
+```
+
+
 
 ## Monitoring
 Installing agent
