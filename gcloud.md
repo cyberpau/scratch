@@ -51,6 +51,16 @@ Delete
 gsutil rm gs://YOUR-BUCKET-NAME/ada.jpg
 ```
 
+## Functions
+Deploy
+```
+gcloud functions deploy helloWorld \
+  --stage-bucket [BUCKET_NAME] \
+  --trigger-topic hello_world \
+  --runtime nodejs8
+```
+
+
 ## Monitoring
 Installing agent
 ```
