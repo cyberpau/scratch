@@ -437,6 +437,17 @@ echo INFRACLASS_REGION=<INSERT_REGION> >> ~/infraclass/config
 
 ## Lab
 
+**Goal:**
+Create an instance template.
+Create a target pool.
+Create a managed instance group.
+Create a firewall rule named as permit-tcp-rule-791 to allow traffic (80/tcp).
+Create a health check.
+Create a backend service, and attach the managed instance group with named port (http:80).
+Create a URL map, and target the HTTP proxy to route requests to your URL map.
+Create a forwarding rule.
+
+
 ```
 gcloud compute instances create Instance_name \
           --network nucleus-vpc \
