@@ -177,6 +177,18 @@ Create a VM instance
 <h3>Web Server: www1</h3>" | tee /var/www/html/index.html'
 ```
 
+Or 
+
+```
+gcloud compute instances create Instance_name \
+          --network nucleus-vpc \
+          --zone change_zone  \
+          --machine-type f1-micro  \
+          --image-family debian-10  \
+          --image-project debian-cloud 
+
+```
+
 Create a firewall rule to allow external traffic to the VM instances:
 ```
 gcloud compute firewall-rules create www-firewall-network-lb \
